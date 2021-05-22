@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Application {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the distance : ");
+		System.out.print("Enter the distance : ");
 		double distance = scanner.nextDouble(); //get the distance from user
 		int time = 0;
 		int hops = 0;
@@ -12,7 +12,7 @@ class Application {
 		int[] restTime = {1,2,5};
 		while(true){
 			int index = hops%3;
-			hops += 1;
+			hops++;
 			remaining -= hopSize[index];
 			if(remaining <= 0){
 				break;
