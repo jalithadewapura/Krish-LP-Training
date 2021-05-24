@@ -1,4 +1,4 @@
-package com.singleton;
+package singleton;
 
 public class MailService {
     private static MailService mailService;
