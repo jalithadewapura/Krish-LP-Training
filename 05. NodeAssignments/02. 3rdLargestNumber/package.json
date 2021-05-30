@@ -1,0 +1,11 @@
+{
+  "name": "02.-3rdlargestnumber",
+  "version": "1.0.0",
+  "description": "\"3rd largest number from a given array\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Jalitha Dewapura\"",
+  "license": "ISC"
+}
