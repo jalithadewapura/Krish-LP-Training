@@ -1,0 +1,11 @@
+{
+  "name": "04.-missingnumber",
+  "version": "1.0.0",
+  "description": "find the missing number from given squence\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jalitha Dewapura",
+  "license": "ISC"
+}
