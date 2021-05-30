@@ -1,0 +1,11 @@
+{
+  "name": "03.-countrepeatitioncharacters",
+  "version": "1.0.0",
+  "description": "count repeatition characters in given string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jalitha Dewapura",
+  "license": "ISC"
+}
