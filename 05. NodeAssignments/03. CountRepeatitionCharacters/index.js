@@ -1,7 +1,8 @@
 let string = 'Hello World';
 
 let countMap = new Map();
-let characterArray = string.split('');
+let lowercaseString = string.toLowerCase();
+let characterArray = lowercaseString.split('');
 
 for(let i=0; i<characterArray.length; i++){
     if(characterArray[i] == null)
@@ -19,11 +20,3 @@ for(let i=0; i<characterArray.length; i++){
 
 
 console.log(countMap);
-
-
-
-// let string = 'Jalitha';
-
-// let array = string.split('');
-
-// console.log(array);
