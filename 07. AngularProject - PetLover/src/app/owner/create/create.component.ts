@@ -17,8 +17,11 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
+    let length = this.ownerService.onGet().length;
+    let previousElement = this.ownerService.owners[length - 1];
+    let id = previousElement.id + 1;
     let owner: Owner = {
-      id: this.ownerService.onGet().length +1,
+      id: id,
       first_name: form.value.first_name,
       last_name: form.value.last_name,
       email: form.value.email,

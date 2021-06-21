@@ -1,1 +1,54 @@
-<p>pet list works!</p>
+<div class="card">
+    <div class="card-header pt-4">
+        <h3 class="col-9">All Pets</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-md-2"> Name Filter:</div>
+                    <div class="col-md-4">
+                        <input type="text" />
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Filtered by :</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 d-flex align-items-center flex-column">
+                <button class="btn btn-primary" routerLink="/pet/create">New Owner</button>
+            </div>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table" *ngIf="pets.length">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Type</th>
+                        <th>Gender</th>
+                        <th>Owner</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pet of pets">
+                        <th>{{pet.name}}</th>
+                        <th>{{pet.age}}</th>
+                        <th>{{pet.type}}</th>
+                        <th>{{pet.gender}}</th>
+                        <th>{{pet.owner}}</th>
+                        <th class="d-flex justify-content-around">
+                            <a class="btn btn-warning btn-sm col-4" [routerLink] = "['../pet/update', pet.id]">Edit</a>
+                            <button class="btn btn-danger btn-sm col-4" (click)="onDelete(pet.id)">Delete</button>
+                        </th>
+                    </tr>
+                </tbody>
+            
+            </table>
+        </div>
+    </div>
+</div>

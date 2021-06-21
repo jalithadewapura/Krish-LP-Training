@@ -1,0 +1,11 @@
+[   {"id":1,"name":"Albertina","age":6,"type":"Cat, Persian","gender":"female", "owner": "Alair"},
+    {"id":2,"name":"Timmy","age":8,"type":"Dog, German Shepherd","gender":"male", "owner": "Loleta"},
+    {"id":3,"name":"Craggy","age":6,"type":"Dog, Golden Retriever","gender":"female", "owner": "Dominga"},
+    {"id":4,"name":"Molly","age":3,"type":"Rabbit","gender":"female", "owner": "Nicolea"},
+    {"id":5,"name":"Aharon","age":12,"type":"Dog, Bulldog","gender":"male", "owner": "Rycca"},
+    {"id":6,"name":"Kakalina","age":5,"type":"Cat, Persian","gender":"female", "owner": "Jerald"},
+    {"id":7,"name":"Thatcher","age":2,"type":"Dog, Golden Retriever","gender":"male", "owner": "Beryl"},
+    {"id":8,"name":"Harrison","age":14,"type":"Cat, Norwegian Forest","gender":"female", "owner": "Alair"},
+    {"id":9,"name":"Fin","age":6,"type":"Rabbit","gender":"male", "owner": "Elnar"},
+    {"id":10,"name":"Cathee","age":13,"type":"Dog, German Shepherd","gender":"male", "owner": "Loleta"}
+]

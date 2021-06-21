@@ -8,7 +8,7 @@ import { UpdateComponent } from './update/update.component';
 const routes: Routes = [
     { path: 'pets', component: ListComponent},
     { path: 'pet/create', component: CreateComponent},
-    { path: 'pet/update', component: UpdateComponent}
+    { path: 'pet/update/:id', component: UpdateComponent}
 ];
 
 @NgModule({

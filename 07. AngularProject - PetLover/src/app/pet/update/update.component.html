@@ -1,1 +1,55 @@
-<p>pet update works!</p>
+<div class="row d-flex justify-content-center">
+    <div class="card col-10">
+        <div class="card-header pt-4">
+            <h3 class="col-9">Edit Pet Details</h3>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm" autocomplete="off">
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Name</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control form-control-sm" [ngModel]="pet.name" name="name">
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Age</label>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control form-control-sm" [ngModel]="pet.age" name="age">
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Type</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control form-control-sm" [ngModel]="pet.type" name="type">
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Gender</label>
+                    <div class="col-md-7 row p-0 m-0">
+                        <div class="col-5">
+                            <input class="form-check-input" type="radio" [ngModel]="pet.gender" name="gender" value="male">
+                            <label class="form-check-label ms-3">Male</label>
+                        </div>
+                        <div class="col-5">
+                            <input class="form-check-input" type="radio"[ngModel]="pet.gender" name="gender" value="female">
+                            <label class="form-check-label ms-3">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Owner Name</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control form-control-sm" [ngModel]="pet.owner" name="owner">
+                    </div>
+                </div>
+                
+                <div class="form-group row d-flex justify-content-center mt-4">
+                    <div class="col-md-10">
+                        <button type="submit" class="btn btn-outline-primary me-2">Update</button>
+                        <button type="reset" class="btn btn-outline-secondary me2">Cancel</button>
+                    </div>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

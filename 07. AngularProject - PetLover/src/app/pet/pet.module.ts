@@ -4,6 +4,7 @@ import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 import { PetRoutingModule } from './pet-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,6 +12,7 @@ import { PetRoutingModule } from './pet-routing.module';
   declarations: [ListComponent, CreateComponent, UpdateComponent],
   imports: [
     CommonModule,
+    FormsModule,
     PetRoutingModule
   ],
   exports: [
