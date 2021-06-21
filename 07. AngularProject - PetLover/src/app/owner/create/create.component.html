@@ -1,0 +1,43 @@
+<div class="row d-flex justify-content-center">
+    <div class="card col-10">
+        <div class="card-header pt-4">
+            <h3 class="col-9">Create New Owner</h3>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm" autocomplete="off">
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">First Name</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control form-control-sm" placeholder="First Name" ngModel name="first_name">
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Last Name</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control form-control-sm" placeholder="Last Name" ngModel name="last_name">
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Email</label>
+                    <div class="col-md-7">
+                        <input type="email" class="form-control form-control-sm" placeholder="user@email.com" ngModel name="email">
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-2">
+                    <label class="col-md-3 col-form-label">Phone Number</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control form-control-sm" placeholder="07xxxxxxxx" ngModel name="phone">
+                    </div>
+                </div>
+                
+                
+                <div class="form-group row d-flex justify-content-center mt-4">
+                    <div class="col-md-10">
+                        <button type="submit" class="btn btn-outline-primary me-2">Create</button>
+                        <button type="reset" class="btn btn-outline-secondary me2">Cancel</button>
+                    </div>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

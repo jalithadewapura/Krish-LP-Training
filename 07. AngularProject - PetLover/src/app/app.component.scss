@@ -1,0 +1,30 @@
+.navbar {
+  background: #102553;
+  height: 55px;
+  float: left;
+  width: 100%;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.nav-link:hover {
+  background: #f4f4f4;
+  color: #070707;
+}
+
+.navbar-toggler {
+  background: #fff !important;
+}
+
+.logo {
+  font-weight: bold;
+  font-family: "Lucida Handwriting", Cursive;
+}
