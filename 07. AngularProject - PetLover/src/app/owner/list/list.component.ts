@@ -11,16 +11,31 @@ import { OwnerService } from '../services/owner.service';
 export class ListComponent implements OnInit {
 
 
-  owners: Owner[] = [];
+  filteredOwners: Owner[] = [];
+
+  private _nameFilter: string = '';
+
+  set nameFilter(value: string) {
+    this.filterByName();
+    this._nameFilter = value;
+  }
+
+  get nameFilter(): string {
+    return this._nameFilter;
+  }
 
   constructor(private ownerService: OwnerService) { }
 
   ngOnInit(): void {
-    this.owners = this.ownerService.onGet();
+    this.filteredOwners = this.ownerService.onGet();
   }
 
   onDelete(id: number) {
     this.ownerService.onDelete(id);
+  }
+
+  filterByName() {
+    this.filteredOwners = this.ownerService.onGet().filter( owner => owner.first_name.includes(this.nameFilter));
   }
 
 }

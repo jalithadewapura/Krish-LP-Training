@@ -8,12 +8,12 @@
                 <div class="row">
                     <div class="col-md-2"> Name Filter:</div>
                     <div class="col-md-4">
-                        <input type="text" />
+                        <input type="text" [(ngModel)]='nameFilter'(ngModelChange)='nameFilter=$event'/>
                     </div>
                 </div> 
                 <div class="row">
                     <div class="col-md-6">
-                        <h6>Filtered by :</h6>
+                        <h6>Filtered by : {{nameFilter}}</h6>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
         </div>
         
         <div class="table-responsive">
-            <table class="table" *ngIf="owners.length">
+            <table class="table" *ngIf="filteredOwners.length">
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -34,7 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let owner of owners">
+                    <tr *ngFor="let owner of filteredOwners">
                         <th>{{owner.first_name}}</th>
                         <th>{{owner.last_name}}</th>
                         <th>{{owner.email}}</th>
