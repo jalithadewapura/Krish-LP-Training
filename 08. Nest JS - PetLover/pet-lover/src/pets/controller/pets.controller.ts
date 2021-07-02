@@ -3,8 +3,7 @@ import { PetUpdateDto } from '../dto/pet-update.dto';
 import { PetSearchDto } from '../dto/pet-search.dto';
 import { PetsService } from '../service/pets.service';
 import { Pet } from '../schema/pet.schema';
-import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put, Query, UsePipes } from '@nestjs/common';
-import { ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put, Query, UsePipes, ValidationPipe } from '@nestjs/common';
 
 @Controller('pets')
 export class PetsController {
