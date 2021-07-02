@@ -1,4 +1,5 @@
 import { IsInt, IsNotEmpty, IsString, Max, Min } from "class-validator";
+import { Owner } from "src/owners/schema/owners.schema";
 
 export class PetUpdateDto {
     
@@ -13,5 +14,5 @@ export class PetUpdateDto {
     age: number;
 
     @IsString()
-    owner: string;
+    owner: Owner;
 }

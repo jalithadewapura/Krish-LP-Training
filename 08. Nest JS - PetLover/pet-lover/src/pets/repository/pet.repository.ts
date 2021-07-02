@@ -17,22 +17,22 @@ export class PetRepository {
     }
 
     async findAll(): Promise<Pet[]> {
-        return await this.petModel.find();
+        return await this.petModel.find().sort('name').populate('owner');
     }
 
     async findById(id: string): Promise<Pet> {
         if(isValidObjectId(id))
-            return await this.petModel.findById(id);
+            return await this.petModel.findById(id).populate('owner');
 
     }
 
     async update(id: string, petUpdateDto: PetUpdateDto): Promise<Pet> {
         if(isValidObjectId(id))
-            return await this.petModel.findByIdAndUpdate(id, petUpdateDto, {new: true});
+            return await this.petModel.findByIdAndUpdate(id, petUpdateDto, {new: true}).populate('owner');
     }
 
     async delete(id: string): Promise<Pet> {
         if(isValidObjectId(id))
-            return await this.petModel.findByIdAndRemove(id);
+            return await this.petModel.findByIdAndRemove(id).populate('owner');
     }
 }

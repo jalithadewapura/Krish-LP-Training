@@ -1,4 +1,5 @@
 import { IsIn, IsInt, IsNotEmpty, IsString, Max, Min } from "class-validator";
+import { Owner } from "src/owners/schema/owners.schema";
 import { Gender } from "../pet.enum";
 
 export class PetCreateDto {
@@ -18,5 +19,5 @@ export class PetCreateDto {
     gender: Gender;
 
     @IsString()
-    owner: string;
+    owner: Owner;
 }
