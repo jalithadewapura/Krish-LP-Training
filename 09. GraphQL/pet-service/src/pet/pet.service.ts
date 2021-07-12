@@ -2,6 +2,7 @@ import { PetRepository } from './pet.repository';
 import { Injectable } from '@nestjs/common';
 import { CreatePetInput } from './dto/create-pet.input';
 import { UpdatePetInput } from './dto/update-pet.input';
+import { Pet } from './pet.schema';
 
 @Injectable()
 export class PetService {
@@ -16,15 +17,15 @@ export class PetService {
     return await this.petRepository.findAll();
   }
 
-  findOne(id: string) {
-    return this.petRepository.findById(id);
+  async findOne(id: string) {
+    return await this.petRepository.findById(id);
   }
 
-  update(id: string, updatePetInput: UpdatePetInput) {
-    return this.petRepository.update(id, updatePetInput);
+  async update(id: string, updatePetInput: UpdatePetInput) {
+    return await this.petRepository.update(id, updatePetInput);
   }
 
-  remove(id: string) {
-    return this.petRepository.remove(id);
+  async remove(id: string) {
+    return await this.petRepository.remove(id);
   }
 }

@@ -3,8 +3,7 @@ import { InjectModel } from "@nestjs/mongoose";
 import { Model, isValidObjectId } from "mongoose";
 import { CreatePetInput } from "./dto/create-pet.input";
 import { UpdatePetInput } from "./dto/update-pet.input";
-import { Pet } from "./entities/pet.entity";
-import { PetDocument } from "./pet.schema";
+import { PetDocument, Pet} from "./pet.schema";
 
 
 @Injectable()
@@ -18,12 +17,12 @@ export class PetRepository {
     }
 
     async findAll(): Promise<Pet[]> {
-        return await this.petModel.find().sort('name').populate('owner');
+        return await this.petModel.find().sort('name');
     }
 
     async findById(id: string): Promise<Pet> {
         if(isValidObjectId(id))
-            return await this.petModel.findById(id).populate('owner');
+            return await this.petModel.findById(id);
 
     }
 
@@ -34,6 +33,6 @@ export class PetRepository {
 
     async remove(id: string): Promise<Pet> {
         if(isValidObjectId(id))
-            return await this.petModel.findByIdAndRemove(id).populate('owner');
+            return await this.petModel.findByIdAndRemove(id);
     }
 }

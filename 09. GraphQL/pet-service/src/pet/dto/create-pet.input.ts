@@ -11,7 +11,7 @@ export class CreatePetInput {
 
     @Field()
     @IsInt()
-    @Min(0)
+    @Min(0) 
     @Max(100)
     age: number;
 

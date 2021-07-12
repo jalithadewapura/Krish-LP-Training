@@ -33,7 +33,7 @@ input CreatePetInput {
 input UpdatePetInput {
   name: String!
   age: Float!
-  type: String!
-  gender: String!
+  type: String
+  gender: String
   ownerId: String!
 }

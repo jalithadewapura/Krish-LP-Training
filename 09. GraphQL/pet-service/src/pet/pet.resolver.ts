@@ -29,7 +29,7 @@ export class PetResolver {
   }
 
   @Mutation(() => Pet)
-  removePet(@Args('id') id: string) {
+  removePet(@Args('id') id: string){
     return this.petService.remove(id);
   }
 }

@@ -1,1 +1,1 @@
-export const MONGO_CONNECTION = "mongodb://localhost:27017/pet-lover?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
+export const MONGO_CONNECTION = "mongodb://localhost:27017/pet-service";
