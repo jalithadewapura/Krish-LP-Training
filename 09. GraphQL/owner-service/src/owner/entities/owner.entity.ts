@@ -1,8 +1,9 @@
-import { ObjectType, Field } from '@nestjs/graphql';
+import { ObjectType, Field, Directive, ID } from '@nestjs/graphql';
 
 @ObjectType()
+@Directive('@key(fields: "id")')
 export class Owner {
-  @Field()
+  @Field((type) => ID)
   id: string;
   @Field()
   first_name: string; 
@@ -12,6 +13,8 @@ export class Owner {
   email: string;
   @Field()
   phone: number;
+
+
 }
 
 

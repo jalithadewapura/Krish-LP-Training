@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Pet } from './entities/pet.entity';
 import { PetSchema } from './pet.schema';
 import { PetRepository } from './pet.repository';
+import { OwnerResolver } from './owner.resolver';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { PetRepository } from './pet.repository';
   providers: [
     PetResolver, 
     PetService,
-    PetRepository
+    PetRepository,
+    OwnerResolver
   ]
 })
 export class PetModule {}

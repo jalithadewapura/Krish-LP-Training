@@ -26,6 +26,11 @@ export class PetRepository {
 
     }
 
+    async findOfOnwer(ownerId: string): Promise<Pet[]> {
+        if(isValidObjectId(ownerId))
+            return await this.petModel.find({ownerId: ownerId});
+    }
+
     async update(id: string, updatePetInput: UpdatePetInput): Promise<Pet> {
         if(isValidObjectId(id))
             return await this.petModel.findByIdAndUpdate(id, updatePetInput, {new: true});

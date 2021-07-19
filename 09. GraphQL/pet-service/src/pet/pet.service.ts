@@ -28,4 +28,8 @@ export class PetService {
   async remove(id: string) {
     return await this.petRepository.remove(id);
   }
+
+  async findOfOwner(ownerId: string) {
+    return await this.petRepository.findOfOnwer(ownerId);
+  }
 }

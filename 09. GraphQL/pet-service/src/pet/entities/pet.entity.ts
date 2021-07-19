@@ -1,8 +1,10 @@
-import { ObjectType, Field } from '@nestjs/graphql';
+import { ObjectType, Field, Directive, ID } from '@nestjs/graphql';
+import { Owner } from './owner.entity';
 
 @ObjectType()
+@Directive('@key(fields: "id")')
 export class Pet {
-  @Field()
+  @Field((type) => ID)
   id: string;
   @Field()
   name: string;
@@ -14,6 +16,9 @@ export class Pet {
   gender: Gender;
   @Field()
   ownerId: string;
+
+  @Field(() => Owner)
+  owner: Owner;
 }
 
 export enum Gender {
